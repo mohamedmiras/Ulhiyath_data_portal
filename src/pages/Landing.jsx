@@ -19,11 +19,15 @@ export function Landing() {
         <img 
           src="/images/desktop hero section image.png" 
           alt="മസ്ജിദ് ഇമാമുൽ ബുഖാരി" 
+          fetchpriority="high"
+          loading="eager"
           className="hidden md:block w-full h-full object-cover object-center scale-[1.05] border-0 outline-none brightness-90 contrast-75 saturate-50 blur-[1px]"
         />
         <img 
           src="/images/mobile hero section image.png" 
           alt="മസ്ജിദ് ഇമാമുൽ ബുഖാരി" 
+          fetchpriority="high"
+          loading="eager"
           className="block md:hidden w-full h-full object-cover object-center scale-[1.05] border-0 outline-none brightness-90 contrast-75 saturate-50 blur-[1px]"
         />
         
