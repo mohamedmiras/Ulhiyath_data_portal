@@ -43,10 +43,10 @@ export function Landing() {
              transition={{ duration: 0.6 }}
              className="w-full text-left"
            >
-              <h1 className="text-6xl md:text-[6rem] lg:text-[7.5rem] font-bold font-ayisha text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] leading-[0.8] md:leading-[0.75] tracking-wide">
+              <h1 className="text-5xl md:text-7xl lg:text-[6rem] font-bold font-ayisha text-white drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] leading-[1.1] md:leading-[1.1] tracking-wide">
                 a-kvPn-Zv C-am-ap-Â-<br />_p-Jm-cn-
               </h1>
-              <p className="mt-4 text-3xl md:text-4xl lg:text-5xl text-yellow-200 font-bold tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] font-manjari">
+              <p className="mt-2 text-2xl md:text-3xl lg:text-4xl text-yellow-200 font-bold tracking-wide drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] font-manjari">
                 ഉള്ഹിയ്യത്ത് കമ്മിറ്റി
               </p>
               
