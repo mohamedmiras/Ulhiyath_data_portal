@@ -43,7 +43,7 @@ export function Login() {
       await login(email, password);
       navigate('/dashboard');
     } catch (err) {
-      setError(`Error: ${err.message || 'Check your credentials'}`);
+      setError('Incorrect username or password');
       console.error(err);
     } finally {
       setLoading(false);
