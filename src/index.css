@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Ayisha';
+  src: url('/fonts/Ayisha.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  /* Warm Premium Colors */
+  --color-warm-white: #FAFAF8;
+  --color-warm-beige: #EBE6DD;
+  --color-warm-sand: #DCCCBB;
+  
+  /* Deep Olive / Islamic Green Palette */
+  --color-olive-50: #F4F6F0;
+  --color-olive-100: #E6EDE0;
+  --color-olive-200: #C9D9BE;
+  --color-olive-300: #A8C299;
+  --color-olive-400: #88AB73;
+  --color-olive-500: #699252;
+  --color-olive-600: #51733E;
+  --color-olive-700: #3B4031; /* Deep Olive */
+  --color-olive-800: #2C3324;
+  --color-olive-900: #1D2316;
+  --color-olive-950: #0E120A;
+
+  /* Muted Emerald Palette */
+  --color-emerald-50: #EDF3F0;
+  --color-emerald-100: #D2E4DA;
+  --color-emerald-200: #A8C9B9;
+  --color-emerald-300: #7AAC97;
+  --color-emerald-400: #518D74;
+  --color-emerald-500: #2A5948; /* Muted Emerald */
+  --color-emerald-600: #21483A;
+  --color-emerald-700: #18352A;
+  --color-emerald-800: #10241C;
+  --color-emerald-900: #0A1611;
+  --color-emerald-950: #040907;
+
+  /* Soft Gold Palette */
+  --color-gold-50: #FAF7EF;
+  --color-gold-100: #F3EBD4;
+  --color-gold-200: #E6CF9D;
+  --color-gold-300: #D4AF37; /* Premium Gold */
+  --color-gold-400: #B8962D;
+  --color-gold-500: #9B7D24;
+  --color-gold-600: #7A611B;
+  --color-gold-700: #5A4713;
+  --color-gold-800: #3B2E0A;
+  --color-gold-900: #1F1704;
+
+  /* Typography */
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-manjari: 'Manjari', 'Inter', system-ui, sans-serif;
+  --font-malayalam: 'Noto Sans Malayalam', 'Inter', system-ui, sans-serif;
+  --font-ayisha: 'Ayisha', 'Inter', system-ui, sans-serif;
+
+  /* Shadows */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.02);
+  --shadow-float: 0 10px 40px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.03);
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  body {
+    background-color: var(--color-warm-white);
+    color: var(--color-olive-900);
+    font-family: var(--font-inter);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Subtle noise texture */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-manjari);
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(250,250,248,0.7) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .glass-panel {
+    background: rgba(250, 250, 248, 0.6);
+    backdrop-filter: blur(24px);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .glass-header {
+    background: rgba(250, 250, 248, 0.8);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .text-malayalam {
+    font-family: var(--font-malayalam);
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
