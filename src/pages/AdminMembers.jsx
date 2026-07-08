@@ -102,7 +102,7 @@ export function AdminMembers() {
 
   const handleCreateMember = async () => {
     try {
-      if (!formData.name || !formData.phone) {
+      if (!formData.name?.trim() || !formData.phone?.trim()) {
         setError('Name and Phone are required.');
         return;
       }
@@ -442,7 +442,7 @@ export function AdminMembers() {
               <div className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-bold text-olive-700 mb-2">Full Name</label>
+                    <label className="block text-sm font-bold text-olive-700 mb-2">Full Name <span className="text-red-500">*</span></label>
                     <input 
                       type="text" 
                       value={formData.name}
@@ -452,7 +452,7 @@ export function AdminMembers() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-bold text-olive-700 mb-2">Phone Number</label>
+                    <label className="block text-sm font-bold text-olive-700 mb-2">Phone Number <span className="text-red-500">*</span></label>
                     <div className="flex">
                       <select 
                         value={countryCode}
