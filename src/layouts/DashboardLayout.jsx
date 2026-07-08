@@ -201,8 +201,8 @@ export function DashboardLayout() {
                 initial={{ x: '-100%' }}
                 animate={{ x: 0 }}
                 exit={{ x: '-100%' }}
-                transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                className="fixed top-0 left-0 bottom-0 w-[280px] bg-gradient-to-b from-emerald-700 to-emerald-800 text-white z-50 shadow-2xl flex flex-col lg:hidden border-r border-emerald-600/30"
+                transition={{ type: 'tween', duration: 0.3, ease: 'easeOut' }}
+                className="fixed top-0 left-0 bottom-0 w-[280px] bg-gradient-to-b from-emerald-700 to-emerald-800 text-white z-50 shadow-2xl flex flex-col lg:hidden border-r border-emerald-600/30 will-change-transform"
               >
                 <div className="p-6 pb-2 flex items-center justify-between border-b border-white/10">
                   <div className="flex items-center gap-3">
